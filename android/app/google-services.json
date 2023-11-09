@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "158976799565",
+    "firebase_url": "https://fir-configure-8dc68-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fir-configure-8dc68",
+    "storage_bucket": "fir-configure-8dc68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158976799565:android:6089215483087e956dbd04",
+        "android_client_info": {
+          "package_name": "com.codexia.codexia_learning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7Pj-_oKfddP9yHnXQSe-O6h8MmQ5SIeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158976799565:android:7b2351c37264b03c6dbd04",
+        "android_client_info": {
+          "package_name": "com.example.firebase_configure"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7Pj-_oKfddP9yHnXQSe-O6h8MmQ5SIeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
