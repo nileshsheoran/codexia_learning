@@ -1,5 +1,4 @@
 import 'package:codexia_learning/course/screen/course_show_screen.dart';
-import 'package:codexia_learning/course/service/course_service.dart';
 import 'package:codexia_learning/login/service/AuthFirebaseService.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 await AuthFirebaseService().signInWithGoogle();
                 if (mounted) {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return ShowCourseScreen(courseService: CourseService());
+                    return const ShowCourseScreen();
                   }));
                 }
               },
