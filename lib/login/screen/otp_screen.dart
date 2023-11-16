@@ -1,7 +1,8 @@
 import 'package:codexia_learning/course/screen/course_show_screen.dart';
-import 'package:codexia_learning/course/service/course_service.dart';
 import 'package:codexia_learning/login/screen/phone_screen.dart';
+import 'package:codexia_learning/shared/colour_const.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
@@ -30,19 +31,9 @@ class _OtpScreenState extends State<OtpScreen> {
       ),
     );
 
-    final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: Border.all(color: const Color.fromRGBO(114, 178, 238, 1)),
-      borderRadius: BorderRadius.circular(8),
-    );
-
-    final submittedPinTheme = defaultPinTheme.copyWith(
-      decoration: defaultPinTheme.decoration?.copyWith(
-        color: const Color.fromRGBO(234, 239, 243, 1),
-      ),
-    );
     var code = '';
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(backgroundColor: ColourConst.deepPurple,),
       body: Container(
         margin: const EdgeInsets.only(left: 25, right: 25),
         child: SingleChildScrollView(
@@ -94,18 +85,20 @@ class _OtpScreenState extends State<OtpScreen> {
                       await auth.signInWithCredential(credential);
                      if(mounted){ Navigator.push(context,
                          MaterialPageRoute(builder: (context) {
-                           return  ShowCourseScreen(courseService: CourseService());
+                           return  const ShowCourseScreen();
                          }));
                      }
                     } catch (e) {
-                      print('wrong otp');
+                      if (kDebugMode) {
+                        print('wrong otp');
+                      }
                     }
                   },
-                  child: Text('Verify phone number'),
                   style: ElevatedButton.styleFrom(
                       primary: Colors.green.shade600,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10))),
+                  child: const Text('Verify phone number'),
                 ),
               ),
               Row(
@@ -115,7 +108,8 @@ class _OtpScreenState extends State<OtpScreen> {
                       child: const Text(
                         'Edit phone number?',
                         style: TextStyle(color: Colors.black),
-                      )),
+                      ),
+                  ),
                 ],
               )
             ],
