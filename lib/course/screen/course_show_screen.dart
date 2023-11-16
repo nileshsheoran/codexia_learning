@@ -20,7 +20,6 @@ class ShowCourseScreenState extends State<ShowCourseScreen> {
   @override
   void initState() {
     courseProvider = Provider.of<CourseProvider>(context, listen: false);
-    courseProvider.courseService.fetchAndPrintCourses();
     super.initState();
   }
 
