@@ -1,15 +1,23 @@
+import 'package:codexia_learning/chapter/provider/chapter_provider.dart';
+import 'package:codexia_learning/chapter/service/chapter_service.dart';
+import 'package:codexia_learning/course/provider/course_provider.dart';
 import 'package:codexia_learning/course/screen/course_show_screen.dart';
 import 'package:codexia_learning/course/service/course_service.dart';
 import 'package:codexia_learning/firebase_options.dart';
+import 'package:codexia_learning/login/screen/auth_screen.dart';
+import 'package:codexia_learning/quiz/provider/quiz_provider.dart';
+import 'package:codexia_learning/quiz/service/quiz_service.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
+    // name: "Codexia"
   );
   const fatalError = true;
 
@@ -39,16 +47,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      //TODO for testing only. Replace with AuthScreen later
-      home: ShowCourseScreen(
-        courseService: CourseService(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+            create: (context) => CourseProvider(CourseService())),
+        ChangeNotifierProvider(
+            create: (context) => ChapterProvider(ChapterService())),
+        ChangeNotifierProvider(
+            create: (context) => QuizProvider(QuizService())),
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        //TODO for testing only. Replace with AuthScreen later
+        // home: const AuthScreen(),
+        home: const ShowCourseScreen(),
       ),
     );
   }

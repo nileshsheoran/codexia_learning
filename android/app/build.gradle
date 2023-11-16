@@ -26,6 +26,7 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 apply plugin: 'com.google.gms.google-services'
 
+
 android {
     namespace "com.codexia.codexia_learning"
     compileSdkVersion flutter.compileSdkVersion

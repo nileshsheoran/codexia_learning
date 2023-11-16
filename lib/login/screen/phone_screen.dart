@@ -1,5 +1,7 @@
 import 'package:codexia_learning/login/screen/otp_screen.dart';
+import 'package:codexia_learning/shared/string_const.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 
@@ -109,7 +111,9 @@ class _PhoneScreenState extends State<PhoneScreen> {
                             (PhoneAuthCredential credential) {},
                         verificationFailed: (FirebaseAuthException e) {
                           if (e.code == 'invalid-phone-number') {
-                            print('The provided phone number is not valid.');
+                            if (kDebugMode) {
+                              print('The provided phone number is not valid.');
+                            }
                           }
 
                         },
@@ -121,15 +125,17 @@ class _PhoneScreenState extends State<PhoneScreen> {
                           }));
                         },
                         codeAutoRetrievalTimeout: (String verificationId) {
-                          print(' Auto-resolution timed out...');
+                          if (kDebugMode) {
+                            print(' Auto-resolution timed out...');
+                          }
                         },
                       );
                     },
-                    child: Text('Send the code'),
                     style: ElevatedButton.styleFrom(
                         primary: Colors.green.shade600,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
+                    child: const Text(StringConst.codeText),
                   ),
                 ),
               ],
