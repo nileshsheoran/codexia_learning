@@ -2,20 +2,20 @@ class Chapter {
   final String chapterName;
   final String chapterContent;
   final String courseId;
-  String? id;
+  String? chapterId;
 
   Chapter(
       {required this.chapterName,
       required this.chapterContent,
       required this.courseId,
-      this.id});
+      this.chapterId});
 
   static Chapter fromMap(Map<String, dynamic> map) {
     return Chapter(
       chapterName: map['chapterName'],
       chapterContent: map['chapterContent'],
       courseId: map['courseId'],
-      id: map['id'],
+      chapterId: map['chapterId'],
     );
   }
 
@@ -24,7 +24,7 @@ class Chapter {
       'chapterName': chapterName,
       'chapterContent': chapterContent,
       'courseId': courseId,
-      'id': id,
+      'chapterId': chapterId,
     };
   }
 }
