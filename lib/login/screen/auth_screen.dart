@@ -1,5 +1,7 @@
 import 'package:codexia_learning/login/screen/login_screen.dart';
 import 'package:codexia_learning/login/screen/phone_screen.dart';
+import 'package:codexia_learning/shared/colour_const.dart';
+import 'package:codexia_learning/shared/string_const.dart';
 import 'package:flutter/material.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -15,8 +17,8 @@ class _AuthScreenState extends State<AuthScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Authentication'),
-          backgroundColor: Colors.blue,
+          title: const Text(StringConst.authentication),
+          backgroundColor: ColourConst.blue,
         ),
         body: Center(
           child: Padding(
@@ -33,7 +35,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Login with Google'),
+                      Text(StringConst.googleText),
                     ],
                   ),
                 ),
@@ -48,9 +50,10 @@ class _AuthScreenState extends State<AuthScreen> {
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Login with Phone'),
+                        Text(StringConst.phoneText),
                       ],
-                    )),
+                    ),
+                ),
               ],
             ),
           ),
