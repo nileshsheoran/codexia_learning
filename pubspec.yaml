@@ -30,7 +30,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   firebase_auth: ^4.10.1
   pinput: ^3.0.1
   provider: ^6.0.5
