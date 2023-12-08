@@ -44,42 +44,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAZbWOQl4el5rw2eGSvDh-Ss7r9xGU98Go',
-    appId: '1:158976799565:web:771d1ab59c0334ae6dbd04',
-    messagingSenderId: '158976799565',
-    projectId: 'fir-configure-8dc68',
-    authDomain: 'fir-configure-8dc68.firebaseapp.com',
-    databaseURL: 'https://fir-configure-8dc68-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'fir-configure-8dc68.appspot.com',
-    measurementId: 'G-XVPZVSR1ML',
+    apiKey: 'AIzaSyBnZalr9fXFg_K3WiENQnOwQ93XZGPVLjE',
+    appId: '1:774768252487:web:0b4e3848c4fab7872bc362',
+    messagingSenderId: '774768252487',
+    projectId: 'codexia--learning',
+    authDomain: 'codexia--learning.firebaseapp.com',
+    databaseURL: 'https://codexia--learning-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'codexia--learning.appspot.com',
+    measurementId: 'G-343N972BLR',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA7Pj-_oKfddP9yHnXQSe-O6h8MmQ5SIeU',
-    appId: '1:158976799565:android:6089215483087e956dbd04',
-    messagingSenderId: '158976799565',
-    projectId: 'fir-configure-8dc68',
-    databaseURL: 'https://fir-configure-8dc68-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'fir-configure-8dc68.appspot.com',
+    apiKey: 'AIzaSyBB5fAisjBskO0sCWK2syuVMUQGva6GPFM',
+    appId: '1:774768252487:android:385e5967e57e150f2bc362',
+    messagingSenderId: '774768252487',
+    projectId: 'codexia--learning',
+    databaseURL: 'https://codexia--learning-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'codexia--learning.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCbpnKU5CJ9CS7hWaEycC19O2EptavWf1w',
-    appId: '1:158976799565:ios:f74ffbc3d8099b946dbd04',
-    messagingSenderId: '158976799565',
-    projectId: 'fir-configure-8dc68',
-    databaseURL: 'https://fir-configure-8dc68-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'fir-configure-8dc68.appspot.com',
+    apiKey: 'AIzaSyDmhF-delJIcd-_OKzLKxkfLJCIlWqkUIc',
+    appId: '1:774768252487:ios:b0389b28a6bc7a9e2bc362',
+    messagingSenderId: '774768252487',
+    projectId: 'codexia--learning',
+    databaseURL: 'https://codexia--learning-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'codexia--learning.appspot.com',
+    androidClientId: '774768252487-ovfpuuc1914p8btap66bdkgjg5fpobmg.apps.googleusercontent.com',
+    iosClientId: '774768252487-15nvvs0a3h3tplndjhq6ko682s9gkppk.apps.googleusercontent.com',
     iosBundleId: 'com.codexia.codexiaLearning',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCbpnKU5CJ9CS7hWaEycC19O2EptavWf1w',
-    appId: '1:158976799565:ios:fd765c2cc4f7b3126dbd04',
-    messagingSenderId: '158976799565',
-    projectId: 'fir-configure-8dc68',
-    databaseURL: 'https://fir-configure-8dc68-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'fir-configure-8dc68.appspot.com',
+    apiKey: 'AIzaSyDmhF-delJIcd-_OKzLKxkfLJCIlWqkUIc',
+    appId: '1:774768252487:ios:c380e063208d14ef2bc362',
+    messagingSenderId: '774768252487',
+    projectId: 'codexia--learning',
+    databaseURL: 'https://codexia--learning-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'codexia--learning.appspot.com',
+    androidClientId: '774768252487-ovfpuuc1914p8btap66bdkgjg5fpobmg.apps.googleusercontent.com',
+    iosClientId: '774768252487-6352uchv4k4gl601f6je752i2hn9dlek.apps.googleusercontent.com',
     iosBundleId: 'com.codexia.codexiaLearning.RunnerTests',
   );
 }
